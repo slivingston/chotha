@@ -87,6 +87,7 @@ def get_empty_source():
     source[f] = '' 
   return source
 
+@route('/init')
 def create_database():
   """Creates a new empty database."""
   #Always start with id  
@@ -833,7 +834,6 @@ def populate_database_with_test_data():
   
   
 if __name__ == "__main__":
-  
   load_config()
   deb = config.getboolean('Advanced', 'debug')
   host = config.get('Basic','host')
